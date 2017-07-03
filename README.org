@@ -1,6 +1,6 @@
 * STATS
-# 447/559 Solved - Easy 134 Medium 229 Hard 84
-# 101 Locked
+| 447/559 Solved - Easy 134 Medium 229 Hard 84 |
+| 101 Locked                                   |
 
 * UNSOLVED
 | UNSOLVED                                     |        | reason     |
@@ -16,6 +16,15 @@
 | 464 Can I Win                                | Medium | wrong      |
 | 546 Remove Boxes                             | Hard   | TLE        |
 | 587 Erect the Fence                          | Hard   | no idea    |
+
+* OTHERS
+| 32 题思路不如 stack 方法 fast, elegant |
+| 41 题没想到桶排序类似方法              |
+| 460 is not O(1), only beats 1.77%      |
+|----------------------------------------|
+| Single Number                          |
+|----------------------------------------|
+| 套路 327, 363, 523, 525                |
 
 * LOCKED
 |  LOCKED |     |
@@ -91,15 +100,3 @@
 |---------+-----|
 |     101 | 101 |
 #+TBLFM: @$2=vsum(@2$2..@-1$2)
-
-* OTHERS
-| 32 题思路不如 stack 方法 fast, elegant |
-| 41 题没想到桶排序类似方法              |
-| 460 is not O(1), only beats 1.77%      |
-|----------------------------------------|
-| Single Number                          |
-|                                        |
-
-
-* 套路
-327, 363, 523, 525
