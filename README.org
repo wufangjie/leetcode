@@ -1,30 +1,26 @@
 * STATS
-| 447/559 Solved - Easy 134 Medium 229 Hard 84 |
+| 452/559 Solved - Easy 134 Medium 232 Hard 86 |
 | 101 Locked                                   |
 
 * UNSOLVED
-| UNSOLVED                                     |        | reason     |
-|----------------------------------------------+--------+------------|
-| 148 Sort List                                | Medium | O(1) S     |
-| 164 Maximum Gap                              | Hard   | O(n) T/S   |
-| 282 Expression Add Operators                 | Hard   | TLE        |
-| 312 Burst Balloons                           | Hard   | no idea    |
-| 324 Wiggle Sort II                           | Medium | O(n/1) T/S |
-| 365 Water and Jug Problem                    | Medium | TLE        |
-| 421 Maximum XOR of Two Numbers in an Array   | Medium | O(n) T     |
-| 423 Reconstruct Original Digits from English | Medium | what?      |
-| 464 Can I Win                                | Medium | wrong      |
-| 546 Remove Boxes                             | Hard   | TLE        |
-| 587 Erect the Fence                          | Hard   | no idea    |
+| UNSOLVED                                     |        | reason  |
+|----------------------------------------------+--------+---------|
+| 148 Sort List                                | Medium | O(1) S  |
+| 312 Burst Balloons                           | Hard   | no idea |
+| 365 Water and Jug Problem                    | Medium | TLE     |
+| 464 Can I Win                                | Medium | no idea |
+| 546 Remove Boxes                             | Hard   | TLE     |
+| 587 Erect the Fence                          | Hard   | no idea |
 
 * OTHERS
-| 32 题思路不如 stack 方法 fast, elegant |
-| 41 题没想到桶排序类似方法              |
-| 460 is not O(1), only beats 1.77%      |
-|----------------------------------------|
-| Single Number                          |
-|----------------------------------------|
-| 套路 327, 363, 523, 525                |
+| 32 the method use stack is better        |
+| 41 the bucket sort like method is better |
+| 460 is not O(1), only beats 1.77%        |
+|------------------------------------------|
+| Single Number                            |
+| Maximum XOR of Two Numbers in an Array   |
+|------------------------------------------|
+| same strategy 327, 363, 523, 525         |
 
 * LOCKED
 |  LOCKED |     |

@@ -9,8 +9,12 @@ class Solution(object):
         :type boxes: List[int]
         :rtype: int
         """
+        # # TLE 20/60
         # @memo
-        # def dfs(boxes):
+        # def dfs(*boxes):
+        #     if not boxes:
+        #         return 0
+
         #     dct = defaultdict(list)
         #     pre = 0
         #     for i, b in enumerate(boxes):
@@ -20,10 +24,29 @@ class Solution(object):
         #         else:
         #             dct[b][-1][1] += 1
 
-        #     pass
+        #     idx, to_remove = set(), set()
+        #     ret = 0
+        #     for k, v in dct.items():
+        #         if len(v) == 1:
+        #             to_remove.add(k)
+        #             lo, hi = v[0]
+        #             idx.update(range(lo, hi))
+        #             ret += (hi - lo) ** 2
+
+        #     if ret:
+        #         return ret + dfs(
+        #             *(boxes[i] for i in range(len(boxes)) if i not in idx))
+
+        #     for k, vs in dct.items():
+        #         for lo, hi in vs:
+        #             ret = max(
+        #                 ret, (hi - lo) ** 2 + dfs(*(boxes[:lo] + boxes[hi:])))
+        #     return ret
+
+        # return dfs(*boxes)
 
 
-        # TLE
+        # # TLE 20/60
         # n = len(boxes)
         # first_value, last_first = {}, {}
         # dct = defaultdict(dict) # {val: {lo: [hi, step]}}
@@ -39,10 +62,6 @@ class Solution(object):
         #         dct[b][pre][1] += 1
 
         # def remove(k, lo, dct, first_value, last_first):
-        #     # import pdb
-        #     # pdb.set_trace()
-        #     # print(k, lo, dct, first_value, last_first, sep='\n',
-        #     #       end='\n' + '-' * 60 + '\n')
         #     hi, count = dct[k][lo]
         #     lolo = last_first[lo]
         #     if hi != n:
