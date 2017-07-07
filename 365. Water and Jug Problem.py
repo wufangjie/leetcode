@@ -1,5 +1,3 @@
-from collections import deque
-
 class Solution(object):
     def canMeasureWater(self, x, y, z):
         """
@@ -10,8 +8,62 @@ class Solution(object):
         """
         # # the method use gcd I haven't think out
 
+        # only beats 1.38%
+        if z > x + y:
+            return False
+        elif z in {0, x, y, x + y}:
+            return True
 
-        # # bfs
+        if x > y:
+            x, y = y, x
+
+        stack = [(0, y), (x, y - x), (0, 0)]
+        visited = {0, y}
+        while stack:
+            a, b = stack.pop()
+            if a == 0:
+                theSum = b + x
+                if theSum in visited:
+                    continue
+                else:
+                    poss = {(x, b)}
+                    if b + x <= y:
+                        poss.add((0, b + x))
+                    else:
+                        poss.add((b + x - y, y))
+            elif b == 0:
+                theSum = a + y
+                if theSum in visited:
+                    continue
+                else:
+                    poss = {(a, y), (x, y + a - x)}
+            elif a == x:
+                theSum = b
+                if theSum in visited:
+                    continue
+                else:
+                    poss = [(0, b)]
+                    if b <= x:
+                        poss.append((b, 0))
+                    else:
+                        poss.append((x, b - x))
+            elif b == y:
+                theSum = a
+                if theSum in visited:
+                    continue
+                else:
+                    poss = ((a, 0), (0, a))
+
+            if theSum == z:
+                return True
+            visited.add(theSum)
+            for state in poss:
+                stack.append(state)
+        return False
+
+
+        # # bfs TLE 25/33
+        # from collections import deque
         # if z > x + y:
         #     return False
 
@@ -88,7 +140,8 @@ class Solution(object):
         # return rec(0, 0)
 
 
-# either dfs or bfs is TLE in python
+# either direct dfs or bfs is TLE in python
+# change 2-d visted set to 1-d sum, accepted, but only beats 1.38%
 import time
 tic = time.time()
 assert Solution().canMeasureWater(3, 5, 4)
@@ -96,5 +149,6 @@ assert not Solution().canMeasureWater(2, 6, 5)
 assert Solution().canMeasureWater(22003, 31237, 1)
 assert Solution().canMeasureWater(22003, 31237, 31238)
 assert Solution().canMeasureWater(22003, 31237, 0)
+print(Solution().canMeasureWater(104659, 104677, 142424))
 #temp = Solution().canMeasureWater(22003, 31237, 1)
 print(time.time() - tic)

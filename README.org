@@ -1,5 +1,5 @@
 * STATS
-| 453/559 Solved - Easy 134 Medium 233 Hard 86 |
+| 454/559 Solved - Easy 134 Medium 234 Hard 86 |
 | 101 Locked                                   |
 
 * UNSOLVED
@@ -7,7 +7,6 @@
 |----------------------------------------------+--------+---------|
 | 148 Sort List                                | Medium | O(1) S  |
 | 312 Burst Balloons                           | Hard   | no idea |
-| 365 Water and Jug Problem                    | Medium | TLE     |
 | 546 Remove Boxes                             | Hard   | TLE     |
 | 587 Erect the Fence                          | Hard   | no idea |
 
