@@ -1,6 +1,8 @@
 * STATS
-| 454/559 Solved - Easy 134 Medium 234 Hard 86 |
+| 460/565 Solved - Easy 137 Medium 236 Hard 87 |
 | 101 Locked                                   |
+I found leetcode will lock some questions several days after release,
+and some questions may unlock
 
 * UNSOLVED
 | UNSOLVED                                     |        | reason  |
