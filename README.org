@@ -1,8 +1,8 @@
 * STATS
 | 460/565 Solved - Easy 137 Medium 236 Hard 87 |
 | 101 Locked                                   |
-I found leetcode will lock some questions several days after release,
-and some questions may unlock
+
+I found leetcode will lock some questions several days after release
 
 * UNSOLVED
 | UNSOLVED                                     |        | reason  |
@@ -11,6 +11,17 @@ and some questions may unlock
 | 312 Burst Balloons                           | Hard   | no idea |
 | 546 Remove Boxes                             | Hard   | TLE     |
 | 587 Erect the Fence                          | Hard   | no idea |
+
+* DRAFT
+| 433 Minimum Genetic Mutation              | Medium | SOLVED   |
+| 457 Circular Array Loop                   | Medium | SOLVED   |
+| 458 Poor Pigs                             | Easy   | SOLVED   |
+| 518 Coin Change 2                         | Medium | SOLVED   |
+|-------------------------------------------+--------+----------|
+| 578 Get Highest Answer Rate Question      | Medium | LOCKED   |
+| 579 Find Cumulative Salary of an Employee | Hard   | LOCKED   |
+|-------------------------------------------+--------+----------|
+| 626 Exchange Seats                        | Medium | DATABASE |
 
 * OTHERS
 | 32 the method use stack is better        |
