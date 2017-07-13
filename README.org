@@ -1,5 +1,5 @@
 * STATS
-| 460/565 Solved - Easy 137 Medium 236 Hard 87 |
+| 462/565 Solved - Easy 137 Medium 235 Hard 90 |
 | 101 Locked                                   |
 
 I found leetcode will lock some questions several days after release
@@ -8,8 +8,6 @@ I found leetcode will lock some questions several days after release
 | UNSOLVED                                     |        | reason  |
 |----------------------------------------------+--------+---------|
 | 148 Sort List                                | Medium | O(1) S  |
-| 312 Burst Balloons                           | Hard   | no idea |
-| 546 Remove Boxes                             | Hard   | TLE     |
 | 587 Erect the Fence                          | Hard   | no idea |
 
 * DRAFT
@@ -32,6 +30,7 @@ I found leetcode will lock some questions several days after release
 | Maximum XOR of Two Numbers in an Array   |
 |------------------------------------------|
 | same strategy 327, 363, 523, 525         |
+| construct one by one dp 312, 546         |
 
 * LOCKED
 |  LOCKED |     |
