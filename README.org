@@ -1,13 +1,12 @@
 * STATS
-| 462/565 Solved - Easy 137 Medium 235 Hard 90 |
-| 101 Locked                                   |
+| 466/569 Solved - Easy 138 Medium 237 Hard 91 |
+| 102 Locked                                   |
 
 I found leetcode will lock some questions several days after release
 
 * UNSOLVED
 | UNSOLVED                                     |        | reason  |
 |----------------------------------------------+--------+---------|
-| 148 Sort List                                | Medium | O(1) S  |
 | 587 Erect the Fence                          | Hard   | no idea |
 
 * DRAFT
@@ -33,7 +32,7 @@ I found leetcode will lock some questions several days after release
 | construct one by one dp 312, 546         |
 
 * LOCKED
-|  LOCKED |     |
+|  LOCKED | 102 |
 |---------+-----|
 | 156-159 |   4 |
 |     161 |   1 |
@@ -103,6 +102,5 @@ I found leetcode will lock some questions several days after release
 |     588 |   1 |
 |     604 |   1 |
 |     616 |   1 |
-|---------+-----|
-|     101 | 101 |
-#+TBLFM: @$2=vsum(@2$2..@-1$2)
+|     642 |   1 |
+#+TBLFM: @1$2=vsum(@2$2..@>$2)
