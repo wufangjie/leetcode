@@ -1,5 +1,5 @@
 * STATS
-| 466/569 Solved - Easy 138 Medium 237 Hard 91 |
+| 470/573 Solved - Easy 139 Medium 240 Hard 91 |
 | 102 Locked                                   |
 
 I found leetcode will lock some questions several days after release
@@ -21,15 +21,16 @@ I found leetcode will lock some questions several days after release
 | 626 Exchange Seats                        | Medium | DATABASE |
 
 * OTHERS
-| 32 the method use stack is better        |
-| 41 the bucket sort like method is better |
-| 460 is not O(1), only beats 1.77%        |
-|------------------------------------------|
-| Single Number                            |
-| Maximum XOR of Two Numbers in an Array   |
-|------------------------------------------|
-| same strategy 327, 363, 523, 525         |
-| construct one by one dp 312, 546         |
+| 32 the method use stack is better              |
+| 41 the bucket sort like method is better       |
+| 365 Water and Jug Problem.py, only beats 2.63% |
+| 460 is not O(1), only beats 1.77%              |
+|------------------------------------------------|
+| Single Number                                  |
+| Maximum XOR of Two Numbers in an Array         |
+|------------------------------------------------|
+| same strategy 327, 363, 523, 525               |
+| construct one by one dp 312, 546               |
 
 * LOCKED
 |  LOCKED | 102 |
