@@ -30,8 +30,10 @@
 | 365 Water and Jug Problem.py, only beats 2.63% |
 | 460 is not O(1), only beats 1.77%              |
 |------------------------------------------------|
+|------------------------------------------------|
 | Single Number                                  |
 | Maximum XOR of Two Numbers in an Array         |
+|------------------------------------------------|
 |------------------------------------------------|
 | same strategy 327, 363, 523, 525               |
 | construct one by one dp 312, 546               |
