@@ -1,15 +1,15 @@
-* STATS
+* 1
 | STATS                                        |
 | 474/577 Solved - Easy 139 Medium 244 Hard 91 |
 | 102 Locked                                   |
 # I found leetcode will lock some questions several days after release
 
-* UNSOLVED
+* 2
 | UNSOLVED                                     |        | reason  |
 |----------------------------------------------+--------+---------|
 | 587 Erect the Fence                          | Hard   | no idea |
 
-* DRAFT
+* 3
 | DRAFT                                     |        |          |
 |-------------------------------------------+--------+----------|
 | 433 Minimum Genetic Mutation              | Medium | SOLVED   |
@@ -22,7 +22,7 @@
 |-------------------------------------------+--------+----------|
 | 626 Exchange Seats                        | Medium | DATABASE |
 
-* NOTE
+* 4
 | NOTE                                           |
 |------------------------------------------------|
 | 32 the method use stack is better              |
@@ -40,7 +40,7 @@
 | same strategy 327, 363, 523, 525               |
 | construct one by one dp 312, 546               |
 
-* LOCKED
+* 5
 |  LOCKED | 102 |
 |---------+-----|
 | 156-159 |   4 |
