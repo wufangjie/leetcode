@@ -1,6 +1,6 @@
 * STATS
 | STATS                                        |
-| 470/573 Solved - Easy 139 Medium 240 Hard 91 |
+| 474/577 Solved - Easy 139 Medium 244 Hard 91 |
 | 102 Locked                                   |
 # I found leetcode will lock some questions several days after release
 
