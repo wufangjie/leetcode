@@ -1,7 +1,7 @@
 * 1
 | STATS                                        |
 |----------------------------------------------|
-| 474/577 Solved - Easy 139 Medium 244 Hard 91 |
+| 477/581 Solved - Easy 140 Medium 246 Hard 91 |
 | 102 Locked                                   |
 # I found leetcode will lock some questions several days after release
 
@@ -42,7 +42,7 @@
 | construct one by one dp 312, 546               |
 
 * 5
-|  LOCKED | 102 |
+|  LOCKED | 103 |
 |---------+-----|
 | 156-159 |   4 |
 |     161 |   1 |
@@ -113,4 +113,5 @@
 |     604 |   1 |
 |     616 |   1 |
 |     642 |   1 |
+|     656 |   1 |
 #+TBLFM: @1$2=vsum(@2$2..@>$2)
