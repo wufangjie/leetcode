@@ -21,4 +21,4 @@ class Solution(object):
         return left[0]
 
 
-# brute force recursive seems like faster
+# brute force recursive seems like faster, no actually this beats 98.52%
