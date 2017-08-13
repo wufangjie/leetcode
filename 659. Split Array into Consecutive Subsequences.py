@@ -9,18 +9,34 @@ class Solution(object):
         """
         lo, hi = nums[0], nums[-1] + 1
         count = Counter(nums)
-
-        exist = (count[lo], 0, 0) # length 1, 2, other
+        c1, c2, c3 = count[lo], 0, 0 # length 1, 2, other
 
         for i in range(lo + 1, hi):
             c = count.get(i, 0)
-            if exist[0] + exist[1] > c:
+            if c1 + c2 > c:
                 return False
 
-            left = max(0, c - sum(exist))
-            exist = (left, exist[0], c - left - exist[0])
+            left = max(0, c - c1 - c2 - c3)
+            c1, c2, c3 = left, c1, c - left - c1
 
-        return exist[0] + exist[1] == 0
+        return c1 == c2 == 0
+
+
+
+        # lo, hi = nums[0], nums[-1] + 1
+        # count = Counter(nums)
+
+        # exist = (count[lo], 0, 0) # length 1, 2, other
+
+        # for i in range(lo + 1, hi):
+        #     c = count.get(i, 0)
+        #     if exist[0] + exist[1] > c:
+        #         return False
+
+        #     left = max(0, c - sum(exist))
+        #     exist = (left, exist[0], c - left - exist[0])
+
+        # return exist[0] + exist[1] == 0
 
 
 
