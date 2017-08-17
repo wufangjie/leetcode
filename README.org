@@ -1,14 +1,13 @@
 * 1
 | STATS                                        |
 |----------------------------------------------|
-| 481/585 Solved - Easy 141 Medium 248 Hard 92 |
+| 482/585 Solved - Easy 141 Medium 248 Hard 93 |
 | 102 Locked                                   |
 # I found leetcode will lock some questions several days after release
 
 * 2
 | UNSOLVED                                     |        | reason  |
 |----------------------------------------------+--------+---------|
-| 587 Erect the Fence                          | Hard   | no idea |
 
 * 3
 | DRAFT                                     |        |          |
