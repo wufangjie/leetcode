@@ -17,21 +17,15 @@ class Solution(object):
         """
         if not root:
             return 0
-        Q = deque([(1, root), (0, None)])
+        Q = deque([(0, None), (1, root)])
         theMax = 1
-        start = end = -1
         while Q:
             pos, node = Q.popleft()
             if node is None:
-                theMax = max(theMax, end - start + 1)
-                start = end = -1
                 if Q:
+                    theMax = max(theMax, Q[-1][0] - Q[0][0] + 1)
                     Q.append((0, None))
             else:
-                if start == -1:
-                    start = pos
-                else:
-                    end = pos
                 pos <<= 1
                 if node.left:
                     Q.append((pos - 1, node.left))
