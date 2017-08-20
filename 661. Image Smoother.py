@@ -4,7 +4,6 @@ class Solution(object):
         :type M: List[List[int]]
         :rtype: List[List[int]]
         """
-        import pdb;pdb.set_trace()
         if not M:
             return M
         nrow, ncol = len(M), len(M[0])
@@ -15,8 +14,8 @@ class Solution(object):
                 temp = self.sum_row([row[0] for row in M], nrow)
                 return [[v // (3 if 0 < j < nrow - 1 else 2)]
                         for j, v in enumerate(temp)]
-        else:
-            rows = [self.sum_row(row, ncol) for row in M]
+
+        rows = [self.sum_row(row, ncol) for row in M]
 
         if nrow == 1:
             return [[rows[0][j] // (3 if 0 < j < ncol - 1 else 2)
