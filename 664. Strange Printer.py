@@ -50,6 +50,42 @@ class Solution(object):
 
         return dp[-1][0]
 
+        # if not s:
+        #     return 0
+
+        # s2 = [s[0]] # compress consecutive characters seems not a good idea
+        # for elem in s:
+        #     if elem != s2[-1]:
+        #         s2.append(elem)
+        # s = s2
+
+        # inf = float('inf')
+        # dp = [[1]]
+        # for i in range(1, len(s)):
+        #     dp.append([0] * i + [1])
+        #     poss = [[j] for j in range(i) if s[j] == s[i]]
+
+        #     m = len(poss)
+        #     poss.append([i, 0])
+        #     poss.reverse()
+
+        #     for j in range(m):
+        #         poss[j + 1].append(
+        #             min(dp[poss[k][0] - 1][poss[j + 1][0] + 1] + poss[k][-1]
+        #                 for k in range(j, -1, -1)))
+
+        #     dp[i][i - 1] = 2
+        #     for j in range(i - 2, -1, -1):
+        #         theMin = inf
+        #         for p, v in poss:
+        #             if p < j:
+        #                 break
+        #             theMin = min(
+        #                 theMin, v + 1 + (dp[p - 1][j] if p - 1 >= j else 0))
+        #         dp[i][j] = theMin
+
+        # return dp[-1][0]
+
 
 
 print(Solution().strangePrinter('bab'), 2)
