@@ -4,19 +4,33 @@ class Solution(object):
         :type root: TreeNode
         :rtype: int
         """
-        theMin = root.val
-        inf = float('inf')
+        # loop version
+        theMin, theMin2 = root.val, float('inf')
+        stack = [root]
+        while stack:
+            node = stack.pop()
+            if node.val <= theMin:
+                if node.left:
+                    stack.append(node.left)
+                    stack.append(node.right)
+            elif node.val < theMin2:
+                theMin2 = node.val
+        return -1 if theMin2 == float('inf') else theMin2
 
-        def dfs(node):
-            if node is None:
-                return inf
-            elif node.val > theMin:
-                return node.val
-            else:
-                return min(dfs(node.left), dfs(node.right))
 
-        ret = dfs(root)
-        return -1 if ret == inf else ret
+        # theMin = root.val
+        # inf = float('inf')
+
+        # def dfs(node):
+        #     if node is None:
+        #         return inf
+        #     elif node.val > theMin:
+        #         return node.val
+        #     else:
+        #         return min(dfs(node.left), dfs(node.right))
+
+        # ret = dfs(root)
+        # return -1 if ret == inf else ret
 
 
 
