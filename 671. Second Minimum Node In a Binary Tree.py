@@ -1,11 +1,13 @@
 class Solution(object):
+    inf = float('inf')
+
     def findSecondMinimumValue(self, root):
         """
         :type root: TreeNode
         :rtype: int
         """
         # loop version
-        theMin, theMin2 = root.val, float('inf')
+        theMin, theMin2 = root.val, self.inf
         stack = [root]
         while stack:
             node = stack.pop()
@@ -15,7 +17,7 @@ class Solution(object):
                     stack.append(node.right)
             elif node.val < theMin2:
                 theMin2 = node.val
-        return -1 if theMin2 == float('inf') else theMin2
+        return -1 if theMin2 is self.inf else theMin2
 
 
         # theMin = root.val
