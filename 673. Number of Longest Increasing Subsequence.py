@@ -1,4 +1,5 @@
 import bisect
+from collections import defaultdict
 
 
 class Solution(object):
@@ -10,36 +11,58 @@ class Solution(object):
         if not nums:
             return 0
 
-        pre = []
-        lastIndex = [-1, -1]
-        for i, elem in enumerate(nums):
+        pre, count = [], []
+        for elem in nums:
             j = bisect.bisect_left(pre, elem)
             if j == len(pre):
                 pre.append(elem)
-                lastIndex = [i, i]
+                count.append(defaultdict(int))
             else:
                 pre[j] = elem
-                if pre[-1] == elem:
-                    lastIndex[1] = i
 
-        dp = [None] * (lastIndex[1] + 1)
-        lp = len(pre)
-        ret = 0
-        theMax = nums[lastIndex[0]]
-        for i in range(lastIndex[1] + 1):
-            if nums[i] <= theMax:
-                longest = count = 1
-                for j in range(i):
-                    if nums[j] < nums[i]:
-                        if dp[j][0] + 1 > longest:
-                            longest = dp[j][0] + 1
-                            count = dp[j][1]
-                        elif dp[j][0] + 1 == longest:
-                            count += dp[j][1]
-                dp[i] = (longest, count)
-                if longest == lp:
-                    ret += count
-        return ret
+            if j == 0:
+                add = 1
+            else:
+                add = sum(v for k, v in count[j - 1].items() if k < elem)
+            count[j][elem] += add
+
+        return sum(count[-1].values())
+
+
+
+        # if not nums:
+        #     return 0
+
+        # pre = []
+        # lastIndex = [-1, -1]
+        # for i, elem in enumerate(nums):
+        #     j = bisect.bisect_left(pre, elem)
+        #     if j == len(pre):
+        #         pre.append(elem)
+        #         lastIndex = [i, i]
+        #     else:
+        #         pre[j] = elem
+        #         if pre[-1] == elem:
+        #             lastIndex[1] = i
+
+        # dp = [None] * (lastIndex[1] + 1)
+        # lp = len(pre)
+        # ret = 0
+        # theMax = nums[lastIndex[0]]
+        # for i in range(lastIndex[1] + 1):
+        #     if nums[i] <= theMax:
+        #         longest = count = 1
+        #         for j in range(i):
+        #             if nums[j] < nums[i]:
+        #                 if dp[j][0] + 1 > longest:
+        #                     longest = dp[j][0] + 1
+        #                     count = dp[j][1]
+        #                 elif dp[j][0] + 1 == longest:
+        #                     count += dp[j][1]
+        #         dp[i] = (longest, count)
+        #         if longest == lp:
+        #             ret += count
+        # return ret
 
 
         # # TLE 201/203
@@ -59,6 +82,9 @@ class Solution(object):
         # theMax = max(max(kv) for kv in dp.values())
         # return sum(kv.get(theMax, 0) for kv in dp.values())
 
+
+# NOTE: arrange all the same longth in a dict (not all in linear as I did)
+# 905ms -> 86ms
 
 
 print(Solution().findNumberOfLIS([1,3,5,4,7]))
