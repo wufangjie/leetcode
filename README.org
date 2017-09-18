@@ -1,7 +1,7 @@
 * 1
 | STATS                                        |
 |----------------------------------------------|
-| 498/601 Solved - Easy 146 Medium 256 Hard 96 |
+| 502/605 Solved - Easy 147 Medium 258 Hard 97 |
 | 103 Locked                                   |
 I found leetcode will lock some questions several days after release\\
 The digit commit message means the times I try to figure it out
