@@ -1,3 +1,6 @@
+from utils import memo
+
+
 class Solution(object):
     def checkValidString(self, s):
         """
@@ -5,11 +8,8 @@ class Solution(object):
         :rtype: bool
         """
         n = len(s)
-        # nLeft, nRight = s.count('('), s.count(')')
-        # nStar = n - nLeft - nRight
-        # if abs(nLeft - nRight) > nStar:
-        #     return False
 
+        # @memo # add memo is useless
         def dfs(count_left, i):
             if count_left < 0:
                 return False
