@@ -8,11 +8,11 @@ _cache = {}
 def _judgePoint24(*nums):
     n = len(nums)
     if n == 1:
-        return True if nums[0] == 24 else False
+        return nums[0] == 24
     if nums in _cache:
         return _cache[nums]
 
-    for pair in set(combinations(nums, 2)):
+    for pair in set(combinations(nums, 2)): # use set or not
         left = []
         i = j = 0
         while i < 2:
@@ -24,31 +24,22 @@ def _judgePoint24(*nums):
         left.extend(nums[j:])
 
         a, b = pair
-        for op in '+-*/':
-            if op == '+':
-                news = [a + b]
-            elif op == '*':
-                news = [a * b]
-            elif op == '-':
-                news = [a - b, b - a]
+        news = [a + b, a * b, a - b, b - a]
+        if b != 0:
+            news.append(a / b)
+        if a != 0:
+            news.append(b / a)
+        for new in news:
+            i = bisect.bisect(left, new)
+            if i > 0:
+                temp = left[:i] + [new]
             else:
-                news = []
-                if b != 0:
-                    news.append(a / b)
-                if a != 0:
-                    news.append(b / a)
-
-            for new in news:
-                i = bisect.bisect(left, new)
-                if i > 0:
-                    temp = left[:i] + [new]
-                else:
-                    temp = [new]
-                if i < n:
-                    temp += left[i:]
-                if _judgePoint24(*temp):
-                    _cache[nums] = True
-                    return True
+                temp = [new]
+            if i < n:
+                temp += left[i:]
+            if _judgePoint24(*temp):
+                _cache[nums] = True
+                return True
     _cache[nums] = False
     return False
 
