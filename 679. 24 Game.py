@@ -1,5 +1,4 @@
-from itertools import permutations, combinations
-from fractions import Fraction
+from itertools import combinations
 import bisect
 
 
@@ -8,7 +7,9 @@ _cache = {}
 def _judgePoint24(*nums):
     n = len(nums)
     if n == 1:
-        return nums[0] == 24
+        return abs(nums[0] - 24) < 1e-7
+        # return nums[0] == 24
+
     if nums in _cache:
         return _cache[nums]
 
@@ -25,6 +26,7 @@ def _judgePoint24(*nums):
 
         a, b = pair
         news = [a + b, a * b, a - b, b - a]
+        a += 0.0 # NOTE
         if b != 0:
             news.append(a / b)
         if a != 0:
@@ -71,7 +73,8 @@ class Solution(object):
         :type nums: List[int]
         :rtype: bool
         """
-        return _judgePoint24(*sorted(Fraction(i) for i in nums))
+        return _judgePoint24(*sorted(nums))
+        # return _judgePoint24(*sorted(Fraction(i) for i in nums))
         # return _judgePoint24(*[Fraction(i) for i in nums])
 
 
@@ -83,6 +86,8 @@ print(Solution().judgePoint24([3, 3, 7, 7]))
 print(Solution().judgePoint24([1, 3, 4, 6]))
 
 print(Solution().judgePoint24([-3, 10, 1, 1]))
+
+print(Solution().judgePoint24([8, 1, 6, 6]))
 print(time.time() - tic)
 
 
@@ -92,6 +97,9 @@ print(time.time() - tic)
 ########################################################################
 # return the process
 ########################################################################
+from itertools import permutations
+from fractions import Fraction
+
 
 _cache_process = {}
 
@@ -161,3 +169,5 @@ print_24([4, 1, 8, 7])
 print_24([3, 3, 7, 7])
 print_24([1, 3, 4, 6])
 print_24([-3, 10, 1, 1])
+
+print_24([8, 1, 6, 6])
