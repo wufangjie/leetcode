@@ -1,10 +1,12 @@
 * 1
 | STATS                                        |
 |----------------------------------------------|
-| 506/609 Solved - Easy 148 Medium 260 Hard 98 |
+| 506/609 Solved - Easy 148 Medium 259 Hard 99 |
 | 103 Locked                                   |
+Something strange, add 685. Redundant Connection II.py, but got "506/609 Solved - Easy 148 Medium 260 Hard 98" to "506/609 Solved - Easy 148 Medium 259 Hard 99"
+
 I found leetcode will lock some questions several days after release\\
-The digit commit message means the times I try to figure it out
+The digit commit message means the times I try to figure it out\\
 
 * 2
 | UNSOLVED                                     |        | reason  |
