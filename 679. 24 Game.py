@@ -26,7 +26,7 @@ def _judgePoint24(*nums):
 
         a, b = pair
         news = [a + b, a * b, a - b, b - a]
-        a += 0.0 # NOTE
+        a += 0.0 # for python2
         if b != 0:
             news.append(a / b)
         if a != 0:

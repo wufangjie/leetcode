@@ -4,7 +4,7 @@ class Solution(object):
         :type time: str
         :rtype: str
         """
-        # python2's True False is slow
+        # python2's True and False is slow
         limit = tuple(map(int, time[:2] + time[3:]))
         digits = sorted(set(limit))
 
