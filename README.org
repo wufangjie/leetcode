@@ -1,18 +1,18 @@
-* 1
+* STATS
 | STATS                                         |
 |-----------------------------------------------|
-| 516/619 Solved - Easy 153 Medium 262 Hard 101 |
+| 520/623 Solved - Easy 155 Medium 263 Hard 102 |
 | 103 Locked                                    |
 Something strange, add 685. Redundant Connection II.py, but got "506/609 Solved - Easy 148 Medium 260 Hard 98" to "506/609 Solved - Easy 148 Medium 259 Hard 99"
 
 I found leetcode will lock some questions several days after release\\
 The digit commit message means the times I try to figure it out\\
 
-* 2
+* UNSOLVED
 | UNSOLVED                                     |        | reason  |
 |----------------------------------------------+--------+---------|
 
-* 3
+* DRAFT
 | DRAFT                                     |        |          |
 |-------------------------------------------+--------+----------|
 | 433 Minimum Genetic Mutation              | Medium | SOLVED   |
@@ -25,7 +25,7 @@ The digit commit message means the times I try to figure it out\\
 |-------------------------------------------+--------+----------|
 | 626 Exchange Seats                        | Medium | DATABASE |
 
-* 4
+* NOTE
 | NOTE                                           |
 |------------------------------------------------|
 | 32 the method use stack is better              |
@@ -43,7 +43,7 @@ The digit commit message means the times I try to figure it out\\
 | same strategy 327, 363, 523, 525               |
 | construct one by one dp 312, 546               |
 
-* 5
+* LOCKED
 |  LOCKED | 103 |
 |---------+-----|
 | 156-159 |   4 |
