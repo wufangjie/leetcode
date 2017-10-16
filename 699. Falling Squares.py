@@ -12,14 +12,13 @@ class Solution(object):
         n = len(positions)
         ret = [0] * n
         for k, (l, w) in enumerate(positions):
-            i = bisect.bisect_right(pos, l) - 1
-            j = bisect.bisect_left(pos, l + w)
-            if i < j:
-                newH = max(height[i:j]) + w
-            else:
-                newH = w
+            i = bisect.bisect_right(pos, l) - 1       # pos[i] <= l
+            j = bisect.bisect_left(pos, l + w, i + 1) # pos[j] >= l + w
+            newH = max(height[i:j]) + w
 
             if pos[i] == l:
+                if pos[j] == l + w:
+                    j += 1 # NOTE important
                 if j - 1 > i:
                     height[i] = newH
                     pos[j - 1] = l + w
