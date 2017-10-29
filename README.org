@@ -1,8 +1,8 @@
 * STATS
 | STATS                                         |
 |-----------------------------------------------|
-| 524/628 Solved - Easy 155 Medium 266 Hard 103 |
-| 103 Locked                                    |
+| 528/632 Solved - Easy 157 Medium 267 Hard 104 |
+| 104 Locked                                    |
 Something strange, add 685. Redundant Connection II.py, but got "506/609 Solved - Easy 148 Medium 260 Hard 98" to "506/609 Solved - Easy 148 Medium 259 Hard 99"
 
 I found leetcode will lock some questions several days after release\\
