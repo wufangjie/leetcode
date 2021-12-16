@@ -1,48 +1,37 @@
-class Solution(object):
-    def getSkyline(self, buildings):
-        """
-        :type buildings: List[List[int]]
-        :rtype: List[List[int]]
-        """
-        if not buildings:
-            return []
+from typing import List
+import heapq
 
-        result = [(buildings[0][0], 0)]
-        for l, r, h in buildings:
-            n = len(result)
+class Solution:
+    def getSkyline(self, buildings: List[List[int]]) -> List[List[int]]:
+        buildings.sort(key=lambda lst: (lst[0], -lst[2], lst[1]))
+        heap = [[0, -2 ** 31]]
+        ret = []
+        for (x, x2, y) in buildings:
+            self.pop_until(ret, heap, x)
+            if y > -heap[0][0]:
+                ret.append([x, y])
+                heapq.heappush(heap, [-y, -x2])
+            elif y == -heap[0][0]:
+                if x2 > -heap[0][1]:
+                    heap[0][1] = -x2
+            elif x2 > -heap[0][1]:
+                heapq.heappush(heap, [-y, -x2])
+        self.pop_until(ret, heap, 2 ** 31)
+        return ret
 
-            for hi in range(n-1, -1, -1):
-                if result[hi][0] < r:
-                    break
-
-            for lo in range(hi, -1, -1):
-                if result[lo][0] <= l:
-                    break
-
-            if l == result[lo][0]:
-                mm = max(h, result[lo][1])
-                if lo != 0 and result[lo - 1][1] == mm: # last but one case
-                    temp = [(result[lo - 1][0], mm)]
-                    lo -= 1
-                else:
-                    temp = [(l, mm)]
+    @staticmethod
+    def pop_until(ret: List[List[int]], heap: List[List[int]], x: int):
+        while -heap[0][1] < x:
+            height, right = heapq.heappop(heap)
+            if ret and ret[-1][1] is None:
+                if -right > ret[-1][0]:
+                    ret[-1][1] = -height
+                    ret.append([-right, None])
             else:
-                temp = [result[lo]]
-                if h > result[lo][1]:
-                    temp.append((l, h))
+                ret.append([-right, None]) # -right for same height
+        if ret and ret[-1][1] is None:
+            ret[-1][1] = -heap[0][0]
 
-            for i in range(lo + 1, hi + 1):
-                mm = max(h, result[i][1])
-                if temp[-1][1] != mm:
-                    temp.append((result[i][0], mm))
-
-            if hi == n - 1:
-                temp.append((r, 0))
-            else:
-                if r != result[hi + 1][0] and temp[-1][1] != result[hi][1]:
-                    temp.append((r, result[hi][1]))
-            result = result[:lo] + temp + result[hi+1:]
-        return result
 
 
 
